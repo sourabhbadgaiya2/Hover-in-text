@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        color: rgba(241, 47, 13, 0.829);
+        text-align: center;
+      }
+      .bot {
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        color: white;
+        display: flex;
+        border-radius: 10px;
+      }
+      .button {
+        padding: 8px;
+        position: relative;
+        margin: 10px;
+        font-size: 20px;
+        background-color: hsla(0, 0%, 58%, 0.5);
+        border-radius: 5px;
+      }
+      .button::before {
+        content: '';
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        /* z-index: -1; */
+        background-color: rgb(255, 255, 255);
+        transition: 0.25s;
+      }
+      .button:hover::before {
+        width: 100%;
+        transition: 0.25s;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hover in Text</h2>
+    <div class="bot">
+      <div class="button">logo</div>
+      <div class="button">home</div>
+      <div class="button">project</div>
+      <div class="button">about</div>
+    </div>
+  </body>
+</html>
